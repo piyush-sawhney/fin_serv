@@ -1,0 +1,168 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-19 19:52:11.455786",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "question",
+  "question_detail",
+  "section_break_youu",
+  "category",
+  "column_break_zqzb",
+  "weightage",
+  "section_break_eyuo",
+  "option_1_score",
+  "option_2_score",
+  "option_3_score",
+  "option_4_score",
+  "option_5_score",
+  "column_break_rbda",
+  "option_1_detail",
+  "option_2_detail",
+  "section_break_lmck",
+  "no_of_choices",
+  "column_break_hzzm",
+  "type"
+ ],
+ "fields": [
+  {
+   "fieldname": "question",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Question",
+   "options": "FinServ Question",
+   "reqd": 1
+  },
+  {
+   "fieldname": "weightage",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Weightage",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "option_1_score",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Option 1 Score",
+   "mandatory_depends_on": "eval:doc.type == 'Choices'",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "option_2_score",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Option 2 Score",
+   "mandatory_depends_on": "eval:doc.type == 'Choices'",
+   "non_negative": 1
+  },
+  {
+   "depends_on": "eval:doc.type == 'Choices' && parseInt(doc.no_of_choices) > 2",
+   "fieldname": "option_3_score",
+   "fieldtype": "Int",
+   "label": "Option 3 Score",
+   "mandatory_depends_on": "eval:doc.type == 'Choices' && parseInt(doc.no_of_choices) > 2",
+   "non_negative": 1
+  },
+  {
+   "depends_on": "eval:doc.type == 'Choices' && parseInt(doc.no_of_choices) > 3",
+   "fieldname": "option_4_score",
+   "fieldtype": "Int",
+   "label": "Option 4 Score",
+   "mandatory_depends_on": "eval:doc.type == 'Choices' && parseInt(doc.no_of_choices) > 3",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "Stage of Life\nFamily Background\nFinancial Background\nKnowledge",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.type == 'Choices'",
+   "fieldname": "section_break_eyuo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_lmck",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "question.no_of_choices",
+   "fieldname": "no_of_choices",
+   "fieldtype": "Data",
+   "label": "No of Choices",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_hzzm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "question.type",
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "label": "Type",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.type == 'Choices' && parseInt(doc.no_of_choices) > 4",
+   "fieldname": "option_5_score",
+   "fieldtype": "Int",
+   "label": "Option 5 Score",
+   "mandatory_depends_on": "eval:doc.type == 'Choices' && parseInt(doc.no_of_choices) > 4",
+   "non_negative": 1
+  },
+  {
+   "fetch_from": "question.question",
+   "fieldname": "question_detail",
+   "fieldtype": "Text",
+   "label": "Question Detail",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_youu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_zqzb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rbda",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval: doc.type == 'Choices'",
+   "fetch_from": "question.option_1",
+   "fieldname": "option_1_detail",
+   "fieldtype": "Small Text",
+   "label": "Option 1 Detail",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: doc.type == 'Choices'",
+   "fieldname": "option_2_detail",
+   "fieldtype": "Small Text",
+   "label": "Option 2 Detail",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-20 12:00:41.897033",
+ "modified_by": "Administrator",
+ "module": "FinServ Risk Management",
+ "name": "Risk Profile Question",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

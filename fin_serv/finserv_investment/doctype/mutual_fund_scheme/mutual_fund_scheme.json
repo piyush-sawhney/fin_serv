@@ -1,0 +1,290 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-20 14:20:05.691970",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "category",
+  "column_break_yhps",
+  "subcategory",
+  "column_break_tizf",
+  "benchmark",
+  "section_break_xfdt",
+  "name1",
+  "column_break_idlk",
+  "plan",
+  "option",
+  "sub_option",
+  "section_break_njoi",
+  "nav",
+  "column_break_jwso",
+  "nav_date",
+  "column_break_tpdq",
+  "expense_ratio",
+  "section_break_arom",
+  "minimum_purchase_subscription",
+  "column_break_izsv",
+  "minimum_additional_purchase",
+  "column_break_haxs",
+  "minimum_sip_subscription",
+  "tab_7_tab",
+  "fund_management_tab",
+  "portfolio_tab",
+  "history_tab",
+  "inception_date",
+  "documents_tab",
+  "scheme_information_document_sid",
+  "key_information_memorandum_kim",
+  "statement_of_additional_information_sai",
+  "code_tab",
+  "section_break_zcdt",
+  "amfi_code",
+  "column_break_ukkx",
+  "isin",
+  "column_break_owiu",
+  "rta_code",
+  "column_break_jtmu",
+  "amc_code",
+  "tab_8_tab"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Small Text",
+   "label": "Name"
+  },
+  {
+   "fieldname": "column_break_idlk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "plan",
+   "fieldtype": "Select",
+   "label": "Plan",
+   "options": "Regular\nDirect"
+  },
+  {
+   "fieldname": "option",
+   "fieldtype": "Select",
+   "label": "Option",
+   "options": "Growth\nIDCW"
+  },
+  {
+   "fieldname": "sub_option",
+   "fieldtype": "Select",
+   "label": "Sub Option",
+   "options": "Payout\nRe-Investment"
+  },
+  {
+   "fieldname": "section_break_zcdt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amfi_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "AMFI Code",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "isin",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ISIN",
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "rta_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "RTA Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "code_tab",
+   "fieldtype": "Tab Break",
+   "label": "Code"
+  },
+  {
+   "fieldname": "column_break_ukkx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_owiu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_njoi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "nav",
+   "fieldtype": "Float",
+   "label": "NAV",
+   "precision": "4"
+  },
+  {
+   "fieldname": "column_break_tpdq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expense_ratio",
+   "fieldtype": "Percent",
+   "label": "Expense Ratio"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Mutual Fund Category"
+  },
+  {
+   "fieldname": "column_break_yhps",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "subcategory",
+   "fieldtype": "Link",
+   "label": "Subcategory",
+   "options": "Mutual Fund Scheme Subcategory"
+  },
+  {
+   "fieldname": "section_break_xfdt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "documents_tab",
+   "fieldtype": "Tab Break",
+   "label": "Documents"
+  },
+  {
+   "fieldname": "scheme_information_document_sid",
+   "fieldtype": "Data",
+   "label": "Scheme Information Document (SID)"
+  },
+  {
+   "fieldname": "key_information_memorandum_kim",
+   "fieldtype": "Data",
+   "label": "Key Information Memorandum (KIM)"
+  },
+  {
+   "fieldname": "statement_of_additional_information_sai",
+   "fieldtype": "Data",
+   "label": "Statement of Additional Information (SAI)"
+  },
+  {
+   "fieldname": "column_break_jwso",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nav_date",
+   "fieldtype": "Date",
+   "label": "NAV Date"
+  },
+  {
+   "fieldname": "column_break_jtmu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amc_code",
+   "fieldtype": "Data",
+   "label": "AMC Code",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "history_tab",
+   "fieldtype": "Tab Break",
+   "label": "History"
+  },
+  {
+   "fieldname": "inception_date",
+   "fieldtype": "Date",
+   "label": "Inception Date"
+  },
+  {
+   "fieldname": "fund_management_tab",
+   "fieldtype": "Tab Break",
+   "label": "Fund Management"
+  },
+  {
+   "fieldname": "portfolio_tab",
+   "fieldtype": "Tab Break",
+   "label": "Portfolio"
+  },
+  {
+   "fieldname": "tab_7_tab",
+   "fieldtype": "Tab Break",
+   "label": "Performance"
+  },
+  {
+   "fieldname": "section_break_arom",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "minimum_purchase_subscription",
+   "fieldtype": "Currency",
+   "label": "Minimum Purchase Subscription"
+  },
+  {
+   "fieldname": "column_break_haxs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "minimum_sip_subscription",
+   "fieldtype": "Currency",
+   "label": "Minimum SIP Subscription"
+  },
+  {
+   "fieldname": "column_break_tizf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "benchmark",
+   "fieldtype": "Data",
+   "label": "Benchmark"
+  },
+  {
+   "fieldname": "column_break_izsv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "minimum_additional_purchase",
+   "fieldtype": "Currency",
+   "label": "Minimum Additional Purchase "
+  },
+  {
+   "fieldname": "tab_8_tab",
+   "fieldtype": "Tab Break",
+   "label": "Revenue Structure"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-20 16:40:34.320517",
+ "modified_by": "Administrator",
+ "module": "FinServ Investment",
+ "name": "Mutual Fund Scheme",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

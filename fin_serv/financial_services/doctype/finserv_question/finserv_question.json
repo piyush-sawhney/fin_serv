@@ -1,0 +1,139 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:QUES-{#####}",
+ "creation": "2024-12-19 16:05:54.919072",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_dvev",
+  "type",
+  "column_break_ioyu",
+  "no_of_choices",
+  "section_break_dkmy",
+  "question",
+  "description",
+  "section_break_wtgx",
+  "option_1",
+  "option_2",
+  "option_3",
+  "option_4",
+  "option_5",
+  "section_break_ivbl",
+  "possibility"
+ ],
+ "fields": [
+  {
+   "fieldname": "question",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Question",
+   "options": "FinServ Question",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_dvev",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Choices\nUser Input"
+  },
+  {
+   "fieldname": "column_break_ioyu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval: doc.type == 'Choices';",
+   "fetch_from": "question.no_of_choices",
+   "fieldname": "no_of_choices",
+   "fieldtype": "Select",
+   "label": "No of Choices",
+   "mandatory_depends_on": "eval: doc.type == 'Choices'",
+   "options": "2\n3\n4\n5"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "depends_on": "eval:doc.type == 'Choices';",
+   "fieldname": "section_break_wtgx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "option_1",
+   "fieldtype": "Small Text",
+   "label": "Option 1",
+   "mandatory_depends_on": "eval:doc.type == 'Choices';"
+  },
+  {
+   "fieldname": "option_2",
+   "fieldtype": "Small Text",
+   "label": "Option 2",
+   "mandatory_depends_on": "eval:doc.type == 'Choices';"
+  },
+  {
+   "fieldname": "option_3",
+   "fieldtype": "Small Text",
+   "label": "Option 3",
+   "mandatory_depends_on": "eval:doc.type == 'Choices' && parseInt(doc.no_of_choices) > 2"
+  },
+  {
+   "fieldname": "option_4",
+   "fieldtype": "Small Text",
+   "label": "Option 4",
+   "mandatory_depends_on": "eval:doc.type == 'Choices' && parseInt(doc.no_of_choices) > 3"
+  },
+  {
+   "fieldname": "option_5",
+   "fieldtype": "Small Text",
+   "label": "Option 5",
+   "mandatory_depends_on": "eval:doc.type == 'Choices' && parseInt(doc.no_of_choices) > 4"
+  },
+  {
+   "depends_on": "eval:doc.type == 'User Input'",
+   "fieldname": "section_break_ivbl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "possibility",
+   "fieldtype": "Small Text",
+   "label": "Possibility",
+   "mandatory_depends_on": "eval:doc.type == 'User Input'"
+  },
+  {
+   "fieldname": "section_break_dkmy",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-20 11:54:31.979808",
+ "modified_by": "Administrator",
+ "module": "Financial Services",
+ "name": "FinServ Question",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
