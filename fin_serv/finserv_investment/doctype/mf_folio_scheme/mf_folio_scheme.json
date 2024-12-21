@@ -1,0 +1,319 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-21 12:30:04.182304",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "folio_details_section",
+  "folio_number",
+  "minor_folio",
+  "column_break_aivu",
+  "mode_of_operation",
+  "column_break_lpzm",
+  "no_of_holders",
+  "holders_tab",
+  "holder_details_section",
+  "first_holder_name",
+  "first_holder_dob",
+  "column_break_bkkj",
+  "first_holder_pan",
+  "first_holder_ckyc",
+  "second_holder_section",
+  "second_holder_name",
+  "second_holder_dob",
+  "column_break_pvxs",
+  "second_holder_pan",
+  "second_holder_ckyc",
+  "section_break_geuf",
+  "third_holder_name",
+  "third_holder_dob",
+  "column_break_oqxe",
+  "third_holde_pan",
+  "third_holder_ckyc",
+  "guardian_section",
+  "guardian_name",
+  "guardian_dob",
+  "column_break_cxdg",
+  "guardian_pan",
+  "guardian_ckyc",
+  "scheme_details_tab",
+  "amc_name",
+  "column_break_dxll",
+  "scheme_isin",
+  "section_break_hrhq",
+  "scheme_name",
+  "column_break_gqko",
+  "scheme",
+  "section_break_anlc",
+  "scheme_plan",
+  "column_break_omak",
+  "scheme_option",
+  "column_break_zuuf",
+  "scheme_suboption",
+  "bank_details_tab",
+  "contact_details_tab"
+ ],
+ "fields": [
+  {
+   "fieldname": "folio_details_section",
+   "fieldtype": "Section Break",
+   "label": "Folio Details"
+  },
+  {
+   "fieldname": "folio_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Folio Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bank_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Bank Details"
+  },
+  {
+   "fieldname": "scheme_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Scheme Details"
+  },
+  {
+   "fieldname": "scheme_name",
+   "fieldtype": "Link",
+   "label": "Scheme Name",
+   "options": "Mutual Fund Scheme",
+   "read_only": 1
+  },
+  {
+   "fieldname": "scheme_plan",
+   "fieldtype": "Data",
+   "label": "Scheme Plan"
+  },
+  {
+   "fieldname": "scheme_option",
+   "fieldtype": "Data",
+   "label": "Scheme Option"
+  },
+  {
+   "fieldname": "scheme_suboption",
+   "fieldtype": "Data",
+   "label": "Scheme Suboption"
+  },
+  {
+   "fieldname": "section_break_anlc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_omak",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_zuuf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "scheme_isin",
+   "fieldtype": "Data",
+   "label": "Scheme ISIN"
+  },
+  {
+   "fieldname": "column_break_aivu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mode_of_operation",
+   "fieldtype": "Select",
+   "label": "Mode of Operation",
+   "options": "Single\nJoint\nAnyone or Survivor"
+  },
+  {
+   "fieldname": "holder_details_section",
+   "fieldtype": "Section Break",
+   "label": "First Holder"
+  },
+  {
+   "fieldname": "first_holder_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "first_holder_pan",
+   "fieldtype": "Data",
+   "label": "PAN"
+  },
+  {
+   "fieldname": "amc_name",
+   "fieldtype": "Data",
+   "label": "AMC Name"
+  },
+  {
+   "fieldname": "column_break_dxll",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "holders_tab",
+   "fieldtype": "Tab Break",
+   "label": "Holder Details"
+  },
+  {
+   "fieldname": "contact_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Contact Details"
+  },
+  {
+   "fieldname": "column_break_bkkj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "second_holder_section",
+   "fieldtype": "Section Break",
+   "label": "Second Holder"
+  },
+  {
+   "fieldname": "second_holder_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "second_holder_dob",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "column_break_pvxs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "second_holder_pan",
+   "fieldtype": "Data",
+   "label": "PAN"
+  },
+  {
+   "fieldname": "second_holder_ckyc",
+   "fieldtype": "Data",
+   "label": "cKYC Number"
+  },
+  {
+   "fieldname": "first_holder_dob",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "first_holder_ckyc",
+   "fieldtype": "Data",
+   "label": "cKYC Number"
+  },
+  {
+   "fieldname": "section_break_geuf",
+   "fieldtype": "Section Break",
+   "label": "Third Holder"
+  },
+  {
+   "fieldname": "third_holder_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "third_holder_dob",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "column_break_oqxe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "third_holde_pan",
+   "fieldtype": "Data",
+   "label": "PAN"
+  },
+  {
+   "fieldname": "third_holder_ckyc",
+   "fieldtype": "Data",
+   "label": "cKYC Number"
+  },
+  {
+   "fieldname": "guardian_section",
+   "fieldtype": "Section Break",
+   "label": "Guardian"
+  },
+  {
+   "fieldname": "guardian_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "guardian_dob",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "column_break_cxdg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "guardian_pan",
+   "fieldtype": "Data",
+   "label": "PAN"
+  },
+  {
+   "fieldname": "guardian_ckyc",
+   "fieldtype": "Data",
+   "label": "cKYC Number"
+  },
+  {
+   "default": "0",
+   "fieldname": "minor_folio",
+   "fieldtype": "Check",
+   "label": "Minor Folio"
+  },
+  {
+   "fieldname": "column_break_lpzm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "no_of_holders",
+   "fieldtype": "Select",
+   "label": "Number of Holder",
+   "options": "1\n2\n3"
+  },
+  {
+   "fieldname": "section_break_hrhq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_gqko",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "scheme",
+   "fieldtype": "Link",
+   "label": "Scheme",
+   "options": "Mutual Fund Scheme"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-21 13:00:03.031961",
+ "modified_by": "Administrator",
+ "module": "FinServ Investment",
+ "name": "MF Folio Scheme",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
