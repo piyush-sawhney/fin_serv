@@ -5,17 +5,376 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_zcrj"
+  "investor_name",
+  "column_break_mjef",
+  "section_break_mtjj",
+  "folio_no",
+  "rta_scheme_code",
+  "column_break_uptg",
+  "mf_folio_scheme",
+  "scheme_name",
+  "section_break_txup",
+  "nav_date",
+  "nav",
+  "column_break_uffk",
+  "units",
+  "column_break_dbpr",
+  "load",
+  "tds",
+  "column_break_jksw",
+  "stamp_duty",
+  "stt",
+  "column_break_nahi",
+  "gross_amount",
+  "net_amount",
+  "section_break_bniq",
+  "remarks",
+  "transaction_codes_tab",
+  "column_break_exqw",
+  "transaction_description",
+  "transaction_type",
+  "transaction_flag",
+  "transaction_head",
+  "transaction_number",
+  "switch_ref_no",
+  "transaction_mode",
+  "transaction_status",
+  "transaction_sub",
+  "transaction_id",
+  "cheque_details_tab",
+  "cheque_number",
+  "cheque_date",
+  "cheque_bank",
+  "kfintech_branch_tab",
+  "confirmation_date",
+  "transaction_date",
+  "branch_name",
+  "inward_number",
+  "column_break_inxo",
+  "branch_code",
+  "branch_transaction_no",
+  "application_number",
+  "ihno",
+  "extra_for_now_tab",
+  "kfintech_price",
+  "kfintech_investor_id",
+  "report_date_and_time",
+  "broker_details_tab",
+  "arn_code",
+  "sub_broker_code",
+  "brokerage_percentage",
+  "commission"
  ],
  "fields": [
   {
-   "fieldname": "section_break_zcrj",
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "label": "Transaction Date"
+  },
+  {
+   "fieldname": "column_break_uffk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "confirmation_date",
+   "fieldtype": "Date",
+   "label": "Process Date"
+  },
+  {
+   "fieldname": "column_break_jksw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nav_date",
+   "fieldtype": "Date",
+   "label": "NAV Date"
+  },
+  {
+   "fieldname": "section_break_mtjj",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "folio_no",
+   "fieldtype": "Data",
+   "label": "Folio No"
+  },
+  {
+   "fieldname": "column_break_uptg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mf_folio_scheme",
+   "fieldtype": "Link",
+   "label": "MF Folio Scheme",
+   "options": "MF Folio Scheme"
+  },
+  {
+   "fieldname": "scheme_name",
+   "fieldtype": "Data",
+   "label": "Scheme Name"
+  },
+  {
+   "fieldname": "investor_name",
+   "fieldtype": "Data",
+   "label": "Investor Name"
+  },
+  {
+   "fieldname": "section_break_txup",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "transaction_codes_tab",
+   "fieldtype": "Tab Break",
+   "label": "Kfintech Codes"
+  },
+  {
+   "description": "Three types P / R / D\nP indicates all Additions\nR Indicates all Subtractions\nD indicates dividend trxns\n",
+   "fieldname": "transaction_head",
+   "fieldtype": "Data",
+   "label": "Transaction Head"
+  },
+  {
+   "description": "Transaction number generated at Kfin\n",
+   "fieldname": "transaction_number",
+   "fieldtype": "Data",
+   "label": "Transaction Number"
+  },
+  {
+   "fieldname": "cheque_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Cheque Details"
+  },
+  {
+   "fieldname": "column_break_exqw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Switch Ref No to identify the Swithout and Switchin\nUnique for two trxns\n",
+   "fieldname": "switch_ref_no",
+   "fieldtype": "Data",
+   "label": "Switch_Ref. No."
+  },
+  {
+   "description": "Normal or Reversal\nfor reversal transactions units and Amount relects negative values, except for cases whereTransaction flag column reflects as \"\"TO\"\" ( transfer out)\"\nN for Normal / Transfer In \nR for rejections / Transfer Out\n",
+   "fieldname": "transaction_mode",
+   "fieldtype": "Data",
+   "label": "Transaction Mode"
+  },
+  {
+   "description": "Processed ( i.e Y)\n",
+   "fieldname": "transaction_status",
+   "fieldtype": "Select",
+   "label": "Transaction Status",
+   "options": "Y\nN"
+  },
+  {
+   "fieldname": "kfintech_branch_tab",
+   "fieldtype": "Tab Break",
+   "label": "Kfintech Processing"
+  },
+  {
+   "description": "Name of the Branch from where trxn routed\n",
+   "fieldname": "branch_name",
+   "fieldtype": "Data",
+   "label": "Branch Name"
+  },
+  {
+   "description": "Transaction number generated at Kfintech\n",
+   "fieldname": "branch_transaction_no",
+   "fieldtype": "Data",
+   "label": "Branch Transaction No"
+  },
+  {
+   "fieldname": "column_break_mjef",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Select",
+   "label": "Transaction Type",
+   "options": "ADD\nADDR\nADDRR\nBNS\nBNSR\nCFI\nCFIR\nCNI\nCNO\nDIR\nDIRR\nDIRRR\nDIV\nDIVR\nDMT\nDMTR\nDSPA\nDSPI\nDSPIR\nDSPN\nDSPO\nDSPOR\nFUL\nFULR\nFULRR\nIPO\nIPOR\nIPORR\nLTIA\nLTIAR\nLTIARR\nLTIN\nLTINR\nLTINRR\nLTOF\nLTOFR\nLTOFRR\nLTOP\nLTOPR\nLTOPRR\nNEW\nNEWR\nNEWRR\nPLDO\nPLDOR\nRED\nREDR\nREDRR\nSIN\nSINR\nSINRR\nSTPA\nSTPAR\nSTPARR\nSTPI\nSTPIR\nSTPN\nSTPNR\nSTPO\nSTPOR\nSTPORR\nSTRA\nSTRAR\nSTRI\nSTRIR\nSTRO\nSTROR\nSWD\nSWDR\nSWIA\nSWIAR\nSWIN\nSWINR\nSWOF\nSWOFR\nSWOP\nSWOPR\nTRFI\nTRFIR\nTRFO\nTRFOR\nTRMI\nTRMO\nUPLO\nUPLOR\nADDD\nDMTD\nDSPID\nFULD\nFULRD\nIPOD\nLTIAD\nLTIND\nLTOFD\nLTOPD\nNEWD\nPLDOD\nREDD\nREDRD\nSIND\nSINDD\nSINRD\nSTPAD\nSTPID\nSTPND\nSTPOD\nSTPORD\nSTRAD\nSTROD\nSWDD\nSWIAD\nSWIND\nSWINRD\nSWOFD\nSWOPD\nTRFOD\nTRMID\nUPLOD"
+  },
+  {
+   "fieldname": "nav",
+   "fieldtype": "Data",
+   "label": "NAV"
+  },
+  {
+   "fieldname": "units",
+   "fieldtype": "Float",
+   "label": "Units",
+   "precision": "4"
+  },
+  {
+   "fieldname": "load",
+   "fieldtype": "Currency",
+   "label": "Load"
+  },
+  {
+   "fieldname": "stamp_duty",
+   "fieldtype": "Currency",
+   "label": "Stamp Duty"
+  },
+  {
+   "fieldname": "stt",
+   "fieldtype": "Currency",
+   "label": "STT"
+  },
+  {
+   "fieldname": "column_break_nahi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gross_amount",
+   "fieldtype": "Currency",
+   "label": "Gross Amount",
+   "precision": "2"
+  },
+  {
+   "fieldname": "net_amount",
+   "fieldtype": "Currency",
+   "label": "Net Amount"
+  },
+  {
+   "fieldname": "column_break_dbpr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tds",
+   "fieldtype": "Currency",
+   "label": "TDS"
+  },
+  {
+   "fieldname": "cheque_number",
+   "fieldtype": "Data",
+   "label": "Cheque Number"
+  },
+  {
+   "fieldname": "extra_for_now_tab",
+   "fieldtype": "Tab Break",
+   "label": "Extra FOr Now"
+  },
+  {
+   "description": "Purchase Offer Price\tIncluding Load\n",
+   "fieldname": "kfintech_price",
+   "fieldtype": "Currency",
+   "label": "Kfintech Price"
+  },
+  {
+   "fieldname": "broker_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Broker Details"
+  },
+  {
+   "fieldname": "kfintech_investor_id",
+   "fieldtype": "Data",
+   "label": "Kfintech Investor ID"
+  },
+  {
+   "description": "Agent Code",
+   "fieldname": "arn_code",
+   "fieldtype": "Data",
+   "label": "ARN Code"
+  },
+  {
+   "fieldname": "sub_broker_code",
+   "fieldtype": "Data",
+   "label": "Sub Broker Code"
+  },
+  {
+   "fieldname": "brokerage_percentage",
+   "fieldtype": "Percent",
+   "label": "Brokerage Percentage"
+  },
+  {
+   "fieldname": "commission",
+   "fieldtype": "Currency",
+   "label": "Commission"
+  },
+  {
+   "fieldname": "report_date_and_time",
+   "fieldtype": "Datetime",
+   "label": "Report Date and Time"
+  },
+  {
+   "description": "Two Types ( N and L)\nN indicates Normal L indicates Late reporting\n",
+   "fieldname": "transaction_sub",
+   "fieldtype": "Select",
+   "label": "Transaction Sub"
+  },
+  {
+   "description": "\"Which is unique for each transaction, which is combination of \nScheme+Folio+Tr type+trxn number\"\n",
+   "fieldname": "transaction_id",
+   "fieldtype": "Data",
+   "label": "Transaction ID"
+  },
+  {
+   "fieldname": "application_number",
+   "fieldtype": "Data",
+   "label": "Application Number"
+  },
+  {
+   "fieldname": "transaction_description",
+   "fieldtype": "Select",
+   "label": "Transaction Description",
+   "options": "Purchase\nPurchase Rejection\nPurchase Rejection Reversal\nBonus Units\nBonus Rejection\nCertificate Issued\nCertificate Issued Rejection\nConsolidation In\nConsolidation Out\nDividend Reinvestment\nReinvestment Rejection\nReinvestment Rejection Reversal\nGross Dividend\nGross Dividend Rejection\nDematerialized\nDematerialized Rejection\nDividend Sweep In\nDividend Sweep In\nDividend Sweep In Rejection\nDividend Sweep In\nDividend Sweep Out\nDividend Sweep Out Rejection\nRedemption\nRedemption Rejection\nRedemption Rejection Reversal\nInitial Allotment\nIPO Rejection\nIPO Rejection Reversal\nLateral Shift In\nLateral Shift In Rejection\nSwitch Over In Rejection Reversal\nLateral Shift In\nLateral Shift In Rejection\nSwitch Over In Rejection Reversal\nLateral Shift Out\nLateral Shift Out Rejection\nLateral Shift Out Rejection Reversal\nLateral Shift Out\nLateral Shift Out Rejection\nLateral Shift Out Rejection Reversal\nPurchase\nPurchase Rejection\nPurchase Rejection Reversal\nPledging\nPledging Rejection\nRedemption\nRedemption Rejection\nRedemption Rejection Reversal\nSystematic Investment\nSIP Rejection\nSIP Rejection Reversal\nS T P In\nS T P In Rejection\nSwitchover In Rejection Reversal\nS T P In\nS T P In Rejection\nS T P In\nS T P In Rejection\nS T P Out\nS T P Out Rejection\nSwitch Over Out Rejection Reversal\nStrip In\nStrip In Rejection\nStrip In\nStrip In Rejection\nStrip Out\nStrip Out Rejection\nSystematic Withdrawal\nSwp Rejection\nSwitch Over In\nSwitch Over In Rejection\nSwitch Over In\nSwitch Over In Rejection\nSwitch Over Out\nSwitch Over Out Rejection\nSwitch Over Out\nSwitch Over Out Rejection\nDemat Transfer In\nDemat Transfer In Rejection\nDemat Transfer Out\nDemat Transfer Out Rejection\nTransmission In\nTransmission Out\nUnpledging\nUnpledging Rejection\nAdditional Purchase Pre-Rejection\nDematerialized Rejection\nDividend Sweep Inpre Rejection\nRedemption Pre Rejection\nRedemption Rejection Deletion\nInitial Purchase Pre-Rejection\nLateral Shift In Pre Rejection\nLateral Shift In Pre Rejection\nLateral Shift Outpre Rejection\nLateral Shift Out Pre Rejection\nNew Purchase Pre-Rejection\nPledging Rejection\nRedemption Pre Rejection\nRedemption Rejection Deletion\nSystematic Investment Pre-Rejection\nSystematic Investment Rejection Deletion\nSIP Rejection Deletion\nS T P In Pre Rejection\nS T P In Pre Rejection\nS T P In Pre Rejection\nS T P Out Pre Rejection\nS T P Out Rejection Deletion\nStrip In Deletion\nStrip Out Pre Rejection\nSystematic Withdrawal Pre Rejection\nSwitch Over In Pre Rejection\nSwitch Over In Pre Rejection\nSwitch Over In Rejection Deletion\nSwitch Over Out Pre Rejection\nSwitch Over Out Pre Rejection\nDemat Transfer Out Rejection\nTransmission In Rejection\nUnpledging Rejection"
+  },
+  {
+   "fieldname": "cheque_date",
+   "fieldtype": "Date",
+   "label": "Cheque Date"
+  },
+  {
+   "fieldname": "cheque_bank",
+   "fieldtype": "Data",
+   "label": "Cheque Bank"
+  },
+  {
+   "description": "\"P/SI/TI/DR/DP indicates additions\n----------------------------------------\nR/SO/TO indicates subtractions\"\n",
+   "fieldname": "transaction_flag",
+   "fieldtype": "Select",
+   "label": "Transaction Flag",
+   "options": "P\nSI\nTI\nDR\nDP\nR\nSO\nTO"
+  },
+  {
+   "fieldname": "column_break_inxo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch_code",
+   "fieldtype": "Data",
+   "label": "Branch Code"
+  },
+  {
+   "description": "Inhouse number\n",
+   "fieldname": "ihno",
+   "fieldtype": "Data",
+   "label": "Ihno"
+  },
+  {
+   "description": "Inward number which provided by the channel distributors for online transactions\n",
+   "fieldname": "inward_number",
+   "fieldtype": "Data",
+   "label": "Inward Number"
+  },
+  {
+   "fieldname": "section_break_bniq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "rta_scheme_code",
+   "fieldtype": "Data",
+   "label": "RTA Scheme Code"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-23 13:35:19.234710",
+ "modified": "2024-12-23 15:39:16.756836",
  "modified_by": "Administrator",
  "module": "FinServ Investment",
  "name": "MF Folio Transaction",
