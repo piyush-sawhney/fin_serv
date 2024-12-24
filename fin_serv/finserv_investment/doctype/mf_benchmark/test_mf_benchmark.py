@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestMutualFundScheme(FrappeTestCase):
+class TestMFBenchmark(FrappeTestCase):
 	pass

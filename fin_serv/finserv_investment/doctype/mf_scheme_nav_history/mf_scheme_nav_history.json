@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-24 13:03:26.705073",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "scheme_data_section",
+  "scheme",
+  "column_break_oawx",
+  "nav_date",
+  "column_break_amia",
+  "nav",
+  "benchmark_data_section",
+  "benchmark",
+  "column_break_duiq",
+  "value_date",
+  "column_break_uuly",
+  "value"
+ ],
+ "fields": [
+  {
+   "fieldname": "scheme_data_section",
+   "fieldtype": "Section Break",
+   "label": "Scheme Data"
+  },
+  {
+   "fieldname": "scheme",
+   "fieldtype": "Link",
+   "label": "Scheme",
+   "options": "MF Scheme"
+  },
+  {
+   "fieldname": "column_break_oawx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nav_date",
+   "fieldtype": "Date",
+   "label": "NAV Date"
+  },
+  {
+   "fieldname": "column_break_amia",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nav",
+   "fieldtype": "Float",
+   "label": "NAV"
+  },
+  {
+   "fieldname": "benchmark_data_section",
+   "fieldtype": "Section Break",
+   "label": "Benchmark Data"
+  },
+  {
+   "fieldname": "benchmark",
+   "fieldtype": "Link",
+   "label": "Benchmark",
+   "options": "MF Benchmark"
+  },
+  {
+   "fieldname": "column_break_duiq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "value_date",
+   "fieldtype": "Date",
+   "label": "Value Date"
+  },
+  {
+   "fieldname": "column_break_uuly",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "value",
+   "fieldtype": "Float",
+   "label": "Value"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-24 13:09:58.389106",
+ "modified_by": "Administrator",
+ "module": "FinServ Investment",
+ "name": "MF Scheme NAV History",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -5,6 +5,5 @@
 from frappe.model.document import Document
 
 
-class MutualFundScheme(Document):
+class MFBenchmark(Document):
 	pass
-# To do validate subcategory

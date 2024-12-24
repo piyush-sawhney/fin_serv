@@ -81,7 +81,7 @@
    "fieldname": "scheme_name",
    "fieldtype": "Link",
    "label": "Scheme Name",
-   "options": "Mutual Fund Scheme",
+   "options": "MF Scheme",
    "read_only": 1
   },
   {
@@ -289,12 +289,12 @@
    "fieldname": "scheme",
    "fieldtype": "Link",
    "label": "Scheme",
-   "options": "Mutual Fund Scheme"
+   "options": "MF Scheme"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-21 13:00:03.031961",
+ "modified": "2024-12-24 12:58:05.545689",
  "modified_by": "Administrator",
  "module": "FinServ Investment",
  "name": "MF Folio Scheme",

@@ -1,21 +1,21 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "field:rta_code",
  "creation": "2024-12-20 14:20:05.691970",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "category",
-  "column_break_yhps",
-  "subcategory",
-  "column_break_tizf",
-  "benchmark",
   "section_break_xfdt",
+  "is_active",
   "name1",
+  "amc",
   "column_break_idlk",
   "plan",
   "option",
   "sub_option",
+  "column_break_spuh",
+  "category",
+  "subcategory",
   "section_break_njoi",
   "nav",
   "column_break_jwso",
@@ -29,6 +29,7 @@
   "column_break_haxs",
   "minimum_sip_subscription",
   "tab_7_tab",
+  "benchmark",
   "fund_management_tab",
   "portfolio_tab",
   "history_tab",
@@ -85,7 +86,6 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "AMFI Code",
-   "reqd": 1,
    "set_only_once": 1
   },
   {
@@ -93,7 +93,6 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "ISIN",
-   "reqd": 1,
    "set_only_once": 1,
    "unique": 1
   },
@@ -142,10 +141,6 @@
    "fieldtype": "Link",
    "label": "Category",
    "options": "Mutual Fund Category"
-  },
-  {
-   "fieldname": "column_break_yhps",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "subcategory",
@@ -240,15 +235,6 @@
    "label": "Minimum SIP Subscription"
   },
   {
-   "fieldname": "column_break_tizf",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "benchmark",
-   "fieldtype": "Data",
-   "label": "Benchmark"
-  },
-  {
    "fieldname": "column_break_izsv",
    "fieldtype": "Column Break"
   },
@@ -261,14 +247,36 @@
    "fieldname": "tab_8_tab",
    "fieldtype": "Tab Break",
    "label": "Revenue Structure"
+  },
+  {
+   "fieldname": "amc",
+   "fieldtype": "Link",
+   "label": "Asset Management Company",
+   "options": "Asset Management Company"
+  },
+  {
+   "fieldname": "benchmark",
+   "fieldtype": "Data",
+   "label": "Benchmark"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "column_break_spuh",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-20 16:40:34.320517",
+ "modified": "2024-12-24 13:27:32.126150",
  "modified_by": "Administrator",
  "module": "FinServ Investment",
- "name": "Mutual Fund Scheme",
+ "name": "MF Scheme",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
